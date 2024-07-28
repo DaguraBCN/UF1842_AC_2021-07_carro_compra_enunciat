@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dagura">
+    <title>Carrito compra de Frutas</title>
+    <link rel="stylesheet" href="css/estils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/canasta-de-frutas.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Carrito de la compra</h1>
+
+        <div id="presentacio">
+            <h2>Aplicación para comprar fruta</h2>
+            <p>Elige la fruta que deseas haciendo click sobre su imagen.</p>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="productes">
+            <div id="producto-pomelo">  <!-- añadimos un id="" a los div de las frutas para identificarlos individualmente -->
+                <img loading="lazy" class="imatges" src="img/aranja.png" alt="Aranja"
+                    onclick="seleccionarProducto('producto-pomelo', 'Pomelo', 2.50, 'kg')">
+                <p>Pomelo : 2,50€/kg</p>
+            </div>
+            <div id="producto-kiwi">
+                <img loading="lazy" class="imatges" src="img/kiwi.png" alt="Kiwi"
+                    onclick="seleccionarProducto('producto-kiwi', 'Kiwi', 4.20, 'kg')">
+                <p>Kiwi : 4,20€/kg</p>
+            </div>
+            <div id="producto-limon">
+                <img loading="lazy" class="imatges" src="img/llimones.png" alt="Llimones"
+                    onclick="seleccionarProducto('producto-limon', 'Limón', 1.20, 'kg')">
+                <p>Limón : 1,20€/kg</p>
+            </div>
+            <div id="producto-pina">
+                <img loading="lazy" class="imatges" src="img/pinya.png" alt="Pinya"
+                    onclick="seleccionarProducto('producto-pina', 'Piña', 2.80, 'ud')">
+                <p>Piña : 2.80€/ud</p>
+            </div>
+            <div id="producto-sandia">
+                <img loading="lazy" class="imatges" src="img/sindria.png" alt="Sindria"
+                    onclick="seleccionarProducto('producto-sandia', 'Sandía', 1.20, 'kg')">
+                <p>Sandía: 1,20€/kg</p>
+            </div>
+            <div id="producto-aguacate">
+                <img loading="lazy" class="imatges" src="img/aguacates.jpg" alt="Aguacates"
+                    onclick="seleccionarProducto('producto-aguacate', 'Aguacate', 2.50, 'ud')">
+                <p>Aguacate : 2,50€/ud</p>
+            </div>
+            <div id="producto-freson">
+                <img loading="lazy" class="imatges" src="img/freson.jpg" alt="Fresón"
+                    onclick="seleccionarProducto('producto-freson', 'Fresón', 6.20, 'kg')">
+                <p>Fresón : 6,20€/kg</p>
+            </div>
+            <div id="producto-mandarina">
+                <img loading="lazy" class="imatges" src="img/mandarina.jpg" alt="Mandarina"
+                    onclick="seleccionarProducto('producto-mandarina', 'Mandarina', 1.90, 'kg')">
+                <p>Mandarina : 1,90€/kg</p>
+            </div>
+            <div id="producto-manzana-fuji">
+                <img loading="lazy" class="imatges" src="img/manzana_fuji.jpg" alt="Manzana Fuji"
+                    onclick="seleccionarProducto('producto-manzana-fuji', 'Manzana Fuji', 4.20, 'kg')">
+                <p>Manzana Fuji : 4,20€/kg</p>
+            </div>
+            <div id="producto-platanos">
+                <img loading="lazy" class="imatges" src="img/platans.png" alt="Plátanos"
+                    onclick="seleccionarProducto('producto-platanos', 'Plátanos', 3.20, 'kg')">
+                <p>Plátanos: 3,20€/kg</p>
+            </div>
+            <div id="producto-pera">
+                <img loading="lazy" class="imatges" src="img/pera.jpg" alt="Pera"
+                    onclick="seleccionarProducto('producto-pera', 'Pera', 1.80, 'kg')">
+                <p>Pera : 1,80€/kg</p>
+            </div>
+            <div id="producto-manzana-golden">
+                <img loading="lazy" class="imatges" src="img/manzana_golden.jpg" alt="Manzana Golden"
+                    onclick="seleccionarProducto('producto-manzana-golden', 'Manzana Golden', 3.50, 'kg')">
+                <p>Manzana Golden: 3,50€/kg</p>
+            </div>
+        </section>
+
+        <section>
+            <!-- <h2>Total carrito:</h2>  -->
+            <div id="totalCompra"><span id="total"><i class="fas fa-shopping-cart fa-sm"></i> Total Compra: <span
+                        id="preuFinal">0,00€</span></span></div>
+            <p id="carrito"></p>
+        </section>
+
+        <section id="finalizarCompra" style="display: none;">
+            <div><button id="btnFinalizar" onclick="finalizarCompra()">Finalizar Compra</button></div>
+            <div id="ticketCompra"></div>
+            <div><button id="btnNuevaCompra" onclick="nuevaCompra()" style="display: none;">Nueva Compra</button></div>
+        </section>
+
+    </main>
+
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>
